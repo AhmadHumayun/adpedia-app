@@ -411,6 +411,11 @@ function w3_close() {
     cards[i].style.height = maxHeight + 'px';
   }
 
+  window.onbeforeunload = () => {
+  for(const form of document.getElementsByTagName('form')) {
+    form.reset();
+  }
+}
 </script>
 
 </body>
