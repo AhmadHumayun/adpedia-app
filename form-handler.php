@@ -4,7 +4,7 @@ $email = $_POST['Email'];
 $subject = $_POST['Subject'];
 $message = $_POST['Message'];
 
-$email_from = 'https://ahmadhumayun.github.io/adpedia-app/';
+$email_from = 'ahmadhumayun.k@gmail.com';
 
 $email_subject = 'New Form Submission';
 
