@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<title>Online Marketing Solutions - Simplizen</title>
+<link rel="canonical" href="https://www.simplizen.com/" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4, 9, 30, 0.7)),url(images/data-graphs-laptop-a.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.w3-bar .w3-button {
+  padding: 30px;
+}
+.bgimg-1 .w3-button {
+      display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.bgimg-1 .w3-button:hover {
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+@media(max-width:700px) {
+    .w3-quarter{
+        flex-direction: column;
+    }
+} 
+
+.w3-quarter .w3-card{
+    flex-basis: 31%;
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s;
+} 
+.w3-quarter .w3-card:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card w3-padding" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide"> 
+	<img alt="Qries" src="images/logo-adpedia.png" width="50" height="50"></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+      <a href="#services" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
+      <a href="contact.html" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+  <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+  <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-mobile" style="margin-top: 80px;" id="home">
+  <div class="w3-display-left w3-text-white" style="width: 90%; color: #fff; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center;">
+    <div class="w3-xlarge w3-text-white" style="font-size: 62px;"><p>Bring Startup Agility to Your Enterprises</p></div><br>
+    <div class="w3-medium" style="margin: 10px 0 40px; font-size: 25px; color: #fff;">Software Development Consulting Services</div>
+    <p><a href="#about" class="w3-button">Learn more and start today</a></p>
+  </div> 
+  <!----
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 25px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div> -->
+</header>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var navbarHeight = document.getElementById("myNavbar").offsetHeight;
+    var navbarLinks = document.querySelectorAll("#myNavbar a,#mySidebar a,#home a");
+
+    
+    navbarLinks.forEach(function(link) {
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        if (link.href!=='javascript:void(0)'){
+        var target = document.querySelector(link.getAttribute("href"));
+          if (target) {
+            var sectionTop = target.offsetTop - navbarHeight;
+            window.scrollTo({
+              top: sectionTop,
+              behavior: "smooth"
+            });
+          }
+        }
+      });
+    });
+  });
+</script>
+
+
+<!-- About Section -->
+<div class="w3-container w3-light-grey w3-mobile w3-margin-top" id="about">
+<div class="w3-container" style="margin:auto; width: 90%" >
+    <div class="w3-container  w3-large w3-margin-top">
+        <div class="w3-container w3-center"> <h2>About Adpedia</h2> </div>
+       <p class="w3-center">Turn your projects into a reality with one of the top software consultant companies. Contact Us </p>
+       <p class="w3-center">Dealing with digital projects can be a demanding process. No matter the complexity, a software development process always implies making many tech-related decisions that can have a huge impact on your business. Navigating all of them can be tricky and nerve-inducing, especially if you don’t have the proper knowledge. But don’t worry – we’re here to help. </p>
+    </div>
+</div>
+</div>
+<hr>
+
+  <div class="w3-row-padding" style="margin-top:30px" id="services">
+        <h2 class="w3-center">Our Services</h2>
+    <div class="w3-third w3-mobile" style="width: 32%">
+        <div class="w3-container">
+      <!-- <i class="fa fa-desktop w3-jumbo w3-left w3-cell w3-margin-right" style="margin-top:60px;"></i> -->
+            <img class="w3-jumbo w3-left w3-cell w3-margin-right" style="margin-top:60px; width: 80px; height: 80px;" src="images/icons/software.png" style="width:60px;height: 60px;">
+      <div class="w3-cell">
+      <p class="w3-large w3-text-teal">Software Development</p>
+      <p>We offer world-class software development services for businesses across all industries. We are experts in manufacturing high-quality technology products that support your business goals and IT requirements. By partnering with us, our clients can access any service we provide in a more convenient way, all of which may be delivered at a fixed cost or on a time and materials basis.
+          <a class="w3-text-red" href="seo.htm"> Learn More &gt; </a></p>
+      </div>
+        </div>  
+
+        </div>
+  
+
+    <div class="w3-third w3-mobile" style="width: 32%">
+ 
+      <!-- <i class="fa fa-cog w3-jumbo w3-left w3-cell w3-margin-right" style="margin-top:60px;"></i> --> 
+      <img class="w3-jumbo w3-left w3-cell w3-margin-right" style="margin-top:60px; width:100px; height: 100px;" src="images/icons/increase-sales-icon-15.jpg" style="width:60px;height: 60px;">
+      <div class="w3-cell">
+      <p class="w3-large w3-text-teal">Paid Media</p>
+      <p>Traffic acquisition via paid marketing channels at an optimal cost of ownership will enable you augment your audience reach. Our paid media experts will work with you to ensure your investments realizes the best returns, you have envisioned across relevant paid marketing channels.
+       <a class="w3-text-red" href="#"> Learn More &gt; </a> 
+      </p>
+ 
+    </div>
+    </div>  
+    <div class="w3-third w3-mobile" style="width: 32%">
+     <!-- <i class="fa fa-diamond  w3-jumbo w3-left w3-cell w3-margin-right" style="margin-top:60px;"></i> -->
+            <img class="w3-jumbo w3-left w3-cell w3-margin-right" style="margin-top:60px; width:110px; height: 110px;" src="images/icons/conversion-icon-20.jpg" style="width:60px;height: 60px;">
+            <div class="w3-cell">
+      <p class="w3-large w3-text-teal">Tracking & Funnel Optimization</p>
+      <p>Tracking conversion funnel is extremely important to ensure efficacy of user acquisition strategy. User's behavior insights will enable you to optimize experience for maximum funnel conversion. Let our experts work with you to implement the right level of tracking based on your specific needs.
+          <a class="w3-text-red" href="#"> Learn More &gt; </a> 
+      </p>
+    </div>
+  </div>
+  </div>
+
+  <div class="w3-row-padding" style="margin-top:30px">
+  
+    <div class="w3-third w3-mobile" style="width: 32%">
+        <div class="w3-container">
+      <!-- <i class="fa fa-desktop w3-jumbo w3-left w3-cell w3-margin-right" style="margin-top:60px;"></i> -->
+            <img class="w3-jumbo w3-left w3-cell w3-margin-right" style="margin-top:60px; width: 80px; height: 80px;" src="images/icons/data.png" style="width:60px;height: 60px;">
+      <div class="w3-cell">
+      <p class="w3-large w3-text-teal">Data Science</p>
+      <p>Our Data Science engineering team solves business problems by developing architecture and intelligence solutions that let you capitalize on all the information gathered by your company. We design innovative algorithms and detailed work processes that use business intelligence principles to reveal hidden patterns in structured and unstructured data, using distributed and massively parallel Big Data and Stream processing, as well as high-performance GPU-accelerated computing concepts.
+          <a class="w3-text-red" href="seo.htm"> Learn More &gt; </a></p>
+      </div>
+        </div>  
+
+        </div>
+  
+
+    <div class="w3-third w3-mobile" style="width: 32%">
+ 
+      <!-- <i class="fa fa-cog w3-jumbo w3-left w3-cell w3-margin-right" style="margin-top:60px;"></i> --> 
+      <img class="w3-jumbo w3-left w3-cell w3-margin-right" style="margin-top:60px; width:100px; height: 100px;" src="images/icons/icon_seo1.jpg" style="width:60px;height: 60px;">
+      <div class="w3-cell">
+      <p class="w3-large w3-text-teal">SEO</p>
+      <p>We use our technical SEO skills built on over 15 years of industry expertise to take a deep dive into what’s hindering your website’s search engine performance. From that technical SEO audit, we execute data-driven SEO services that use our content, design, and paid media departments to increase your business’s visibility and drive meaningful and measurable results.
+       <a class="w3-text-red" href="#"> Learn More &gt; </a> 
+      </p>
+ 
+    </div>
+    </div>  
+    <div class="w3-third w3-mobile" style="width: 32%">
+     <!-- <i class="fa fa-diamond  w3-jumbo w3-left w3-cell w3-margin-right" style="margin-top:60px;"></i> -->
+            <img class="w3-jumbo w3-left w3-cell w3-margin-right" style="margin-top:60px; width:110px; height: 110px;" src="images/icons/bizops.png" style="width:60px;height: 60px;">
+            <div class="w3-cell">
+      <p class="w3-large w3-text-teal">Business Operations</p>
+      <p>Adpedia offers diverse set of expertise and skillset to help you scale your Business Operations including Customer (Services & Support), Financial and Sales Operations .
+          <a class="w3-text-red" href="#"> Learn More &gt; </a> 
+      </p>
+    </div>
+  </div>
+  </div>
+ 
+<hr>
+
+<!-- Team Section -->
+<div class="w3-container">
+  <h2 class="w3-center">Our Values</h2>
+    <p class="w3-center w3-large w3-text-grey">What We Believe</p>
+<div class="w3-row-padding w3-section"  id="values" >
+  <div class="w3-quarter">
+      <div class="w3-card w3-white w3-center">
+          <!-- <img src="images/innovative-icon-13.jpg" alt="John" style="width:40%; background-color:white;"> -->
+          <img src="images/innovation-icon-25.jpg" alt="Mike" style="width: 150px; height: 150px; background-color: white;">
+          <div class="w3-container w3-center w3-large w3-text-black">
+          <h3 class="w3-text-teal">Innovative</h3>
+          <p>Our passion for your success is our motivation for continuous testing, validation and implementation of new strategies </p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-quarter" >
+      <div class="w3-card w3-white w3-center">
+        <img src="images/strengthen-icon-4.jpg" alt="Jane" style="width:40%; background-color: white;">
+        <div class="w3-container w3-center w3-large w3-text-black">
+          <h3 class="w3-text-teal">Genuine</h3>
+          <p>Our stakes are as high as yours, we consider ourselves strategic partner in your success</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-card w3-white w3-center">
+        <!-- <img src="images/responsibility-icon-10.jpg" alt="Mike" style="width:40%; background-color: white;"> -->
+         <img src="images/criteria-icon-1.jpg" alt="Mike" style="width: 150px; height: 150px; background-color: white;">
+        <div class="w3-container w3-center w3-large w3-text-black">
+          <h3 class="w3-text-teal">Accountable</h3>
+          <p>Result oriented and driven by the impact we create.</p>
+      
+      </div>
+    </div>
+
+  </div>
+        <div class="w3-quarter">
+      <div class="w3-card w3-white w3-center">
+         <!-- <img src="images/community.png" alt="Mike" style="width:40%; background-color: white;"> -->
+         <img src="images/customer-service-icon-19.jpg" alt="Mike" style="width:40%; background-color: white;">
+         
+        <div class="w3-container w3-center w3-large w3-text-black">
+          <h3 class="w3-text-teal">Service</h3>
+          <p>We strive for excellence and over delivery on our commitments.</p>
+      
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+<hr>
+<!-- Promo Section "Statistics" -->
+<div class="w3-container w3-row w3-center w3-black w3-padding-64">
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">14+</span>
+    <br>Partners
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">55+</span>
+    <br>Projects Done
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">89+</span>
+    <br>Happy Clients
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">150+</span>
+    <br>Meetings
+  </div>
+</div>
+
+
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Skills Section -->
+
+
+<!-- Pricing Section -->
+
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:60px 16px" id="contact">
+  <h3 class="w3-center">CONTACT</h3>
+  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+  <div style="margin-top:48px">
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> California, US</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: (925) 226-8756‬</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+    <br>
+    <form action="/form-handler.php" method="post" target="_blank">
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-black" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+    <!-- Image of location/map -->
+    <!-- <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px"> -->
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+
+  // Get all the elements with the w3-card class
+  var cards = document.getElementsByClassName('w3-card w3-white w3-center');
+  console.log('class : ',cards)
+  // Initialize the variable to store the maximum height
+  var maxHeight = 0;
+
+  // Loop through all the elements and find the maximum height
+  for (var i = 0; i < cards.length; i++) {
+    var cardHeight = cards[i].clientHeight;
+    if (cardHeight > maxHeight) {
+      maxHeight = cardHeight;
+    }
+  }
+
+  // Set the maximum height to all the elements
+  for (var i = 0; i < cards.length; i++) {
+    cards[i].style.height = maxHeight + 'px';
+  }
+
+</script>
+
+</body>
+</html>
+
