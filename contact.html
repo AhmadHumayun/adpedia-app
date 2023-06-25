@@ -39,41 +39,47 @@ body, html {
         <p>Drop us a line below to connect with SimpliZen team member.</p>
  
 <!-- Contact Us Widget -->
-
-  <div class="w3-row-padding" style="margin:5px;">
+<form action="https://formspree.io/f/mnqkajlw" method="POST">
+  <div class="w3-row-padding"  style="margin:5px;">
       <div class="w3-half">
-          <input class="w3-input w3-border" type="text" placeholder="First Name">
+          <input class="w3-input w3-border"  name = "first_name" type="text" placeholder="First Name">
       </div>
       <div class="w3-half">
-         <input class="w3-input w3-border" type="text" placeholder="Last Name">
+         <input class="w3-input w3-border"  name = "last_name" type="text" placeholder="Last Name">
        </div>
       <div class="w3-container">
-          <input class="w3-input w3-border" type="text" placeholder="How Can SimpliZen help you?" style="height: 170px; margin-top: 20px;">
+          <input class="w3-input w3-border"  name = "message" type="text" placeholder="How Can SimpliZen help you?" style="height: 170px; margin-top: 20px;">
       </div>
             <div class="w3-container">
-          <input class="w3-input w3-border" type="text" placeholder="Email Address So That We Can Reach Out To You" style="margin-top: 20px;">
+          <input class="w3-input w3-border"  name = "email" type="text" placeholder="Email Address So That We Can Reach Out To You" style="margin-top: 20px;">
       </div>
       <div class="w3-container">
-          <input class="w3-input w3-border" type="text" placeholder="Phone Number" style="margin-top: 20px;">
+          <input class="w3-input w3-border"  name = "phone" type="text" placeholder="Phone Number" style="margin-top: 20px;">
       </div>
       <div class="w3-container">
-          <input class="w3-input w3-border" type="text" placeholder="Company Name" style="margin-top: 20px;">
+          <input class="w3-input w3-border"  name = "company" type="text" placeholder="Company Name" style="margin-top: 20px;">
       </div>
       <div class="w3-container">
-          <input class="w3-input w3-border" type="text" placeholder="Website URL" style="margin-top: 20px;">
+          <input class="w3-input w3-border"  name = "website" type="text" placeholder="Website URL" style="margin-top: 20px;">
       </div>
        <p>
         <div class="w3-container w3-left">
         <p>
-        <input class="w3-check" type="checkbox">
+        <input class="w3-check" name="org" type="checkbox">
         <label>Non Profit Organization</label>
        </p>
         </div>
       <div class="w3-container">
-          <button class="w3-btn w3-teal w3-text-white" style="margin-top: 20px; width:100%; margin-bottom: 20px;"> Contact Us</button>
+              <!-- <p>
+        <button class="w3-button w3-black" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p> -->
+          <button class="w3-btn w3-teal w3-text-white" style="margin-top: 20px; width:100%; margin-bottom: 20px;" type="submit"> Contact Us</button>
       </div>
       </div>
     </div>
+    </form>
   <div class="w-container w3-light-grey">
     <div class="w3-row-padding" style="margin-top: 60px;">
         <div class="w3-third">
