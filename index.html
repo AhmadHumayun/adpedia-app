@@ -338,19 +338,19 @@ body, html {
     <br>
     <!-- <form action="https://formspree.io/f/mnqkajlw" method="POST"> -->
       <!-- <form action="form-handler.php" method="post"> -->
-    <form id="emailForm" method="post">
-      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-border" type="email" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><textarea class="w3-input w3-border" placeholder="Message" required name="Message"></textarea></p>
+    <form >
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name" id="name"></p>
+      <p><input class="w3-input w3-border" type="email" placeholder="Email" required name="Email" id="email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject" id="subject"></p>
+      <p><textarea class="w3-input w3-border" placeholder="Message" required name="Message" id="message"></textarea></p>
       <p>
         <button class="w3-button w3-black" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          <i class="fa fa-paper-plane"></i><a href="mailto:name@abc.com"></a> SEND MESSAGE
         </button>
       </p>
     </form>
           <!-- <div class="w3-large w3-section">
-    <a href="mailto:name@abc.com?subject=The%20subject%20of%20the%20mail">
+    
 Send mail with subject</a>
   </div> -->
       </p>
@@ -432,19 +432,21 @@ Send mail with subject</a>
   // Get the URL parameter values
   const urlParams = new URLSearchParams(window.location.search);
 
-  // Format the values for the Gmail message body
-  const name = decodeURL(urlParams.get('Name'));
-  const email = decodeURL(urlParams.get('Email'));
-  const subject = decodeURL(urlParams.get('Subject'));
-  const message = decodeURL(urlParams.get('Message'));
+  // Populate the form fields with the decoded values
+  document.getElementById('name').value = decodeURL(urlParams.get('Name'));
+  document.getElementById('email').value = decodeURL(urlParams.get('Email'));
+  document.getElementById('subject').value = decodeURL(urlParams.get('Subject'));
+  document.getElementById('message').value = decodeURL(urlParams.get('Message'));
 
-  const formattedMessage = `Name: ${name}%0D%0AEmail: ${email}%0D%0ASubject: ${subject}%0D%0AMessage: ${message}`;
+    // Get the URL parameter values
+    const searchParams = new URLSearchParams(window.location.search);
 
-  // Create the mailto URL with the formatted message
-  const mailtoURL = `mailto:info@adpedia.net?body=${formattedMessage}`;
+    // Populate the form fields with the decoded values
+    document.getElementById('name').value = decodeURL(searchParams.get('Name'));
+    document.getElementById('email').value = decodeURL(searchParams.get('Email'));
+    document.getElementById('subject').value = decodeURL(searchParams.get('Subject'));
+    document.getElementById('message').value = decodeURL(searchParams.get('Message'));
 
-  // Set the form action to the mailto URL
-  document.getElementById('emailForm').setAttribute('action', mailtoURL);
 
 </script>
 
