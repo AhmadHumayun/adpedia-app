@@ -338,23 +338,27 @@ body, html {
     <br>
     <!-- <form action="https://formspree.io/f/mnqkajlw" method="POST"> -->
       <!-- <form action="form-handler.php" method="post"> -->
-    <form >
-      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name" id="name"></p>
-      <p><input class="w3-input w3-border" type="email" placeholder="Email" required name="Email" id="email"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject" id="subject"></p>
-      <p><textarea class="w3-input w3-border" placeholder="Message" required name="Message" id="message"></textarea></p>
+    <form action="mailto:info@adpedia.net" method="post">
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name" id="name" onKeyUp="sendEmail()"></p>
+      <p><input class="w3-input w3-border" type="email" placeholder="Email" required name="Email" id="email" onKeyUp="sendEmail()"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject" id="subject" onKeyUp="sendEmail()"></p>
+      <p><textarea class="w3-input w3-border" placeholder="Message" required name="Message" id="message" onKeyUp="sendEmail()"></textarea></p>
       <p>
-        <button class="w3-button w3-black" type="submit">
-          <i class="fa fa-paper-plane"></i><a href="mailto:name@abc.com"></a> SEND MESSAGE
+        <a href="" id="send_email">
+        <button class="w3-button w3-black" href="" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
+        </a>
       </p>
     </form>
+    <div class="flex justify-center">
+</div>
           <!-- <div class="w3-large w3-section">
-    
+    <a href="mailto:name@abc.com?subject=The%20subject%20of%20the%20mail">
 Send mail with subject</a>
   </div> -->
-      </p>
-    </form>
+      <!-- </p>
+    </form> -->
     <!-- Image of location/map -->
     <!-- <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px"> -->
   </div>
@@ -429,24 +433,18 @@ Send mail with subject</a>
     return decodeURIComponent(url.replace(/\+/g, ' '));
   }
 
-  // Get the URL parameter values
-  const urlParams = new URLSearchParams(window.location.search);
+  function sendEmail() {
+  var link = document.getElementById('send_email');
+  var name = document.getElementById('name').value;
+  var subject = document.getElementById('subject').value;
+  var message = "Hello my name is " + name + " -- " + document.getElementById('message').value;
+  var email = "info@adpedia.net";
+  var href = "mailto:" + email + "?subject=" + subject + "&body=" + message;
+  console.log(href);
+  link.setAttribute("href", href);
+}
 
-  // Populate the form fields with the decoded values
-  document.getElementById('name').value = decodeURL(urlParams.get('Name'));
-  document.getElementById('email').value = decodeURL(urlParams.get('Email'));
-  document.getElementById('subject').value = decodeURL(urlParams.get('Subject'));
-  document.getElementById('message').value = decodeURL(urlParams.get('Message'));
-
-    // Get the URL parameter values
-    const searchParams = new URLSearchParams(window.location.search);
-
-    // Populate the form fields with the decoded values
-    document.getElementById('name').value = decodeURL(searchParams.get('Name'));
-    document.getElementById('email').value = decodeURL(searchParams.get('Email'));
-    document.getElementById('subject').value = decodeURL(searchParams.get('Subject'));
-    document.getElementById('message').value = decodeURL(searchParams.get('Message'));
-
+  
 
 </script>
 
