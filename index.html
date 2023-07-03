@@ -438,6 +438,22 @@ Send mail with subject</a>
   document.getElementById('subject').value = decodeURL(urlParams.get('Subject'));
   document.getElementById('message').value = decodeURL(urlParams.get('Message'));
 
+
+      // Function to decode URL-encoded values
+    function decodeURL(url) {
+      return decodeURIComponent(url.replace(/\+/g, ' '));
+    }
+
+    // Get the URL parameter values
+    const searchParams = new URLSearchParams(window.location.search);
+
+    // Populate the form fields with the decoded values
+    document.getElementById('name').value = decodeURL(searchParams.get('Name'));
+    document.getElementById('email').value = decodeURL(searchParams.get('Email'));
+    document.getElementById('subject').value = decodeURL(searchParams.get('Subject'));
+    document.getElementById('message').value = decodeURL(searchParams.get('Message'));
+
+
 </script>
 
 </body>
