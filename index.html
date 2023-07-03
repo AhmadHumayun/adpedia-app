@@ -338,15 +338,17 @@ body, html {
     <br>
     <!-- <form action="https://formspree.io/f/mnqkajlw" method="POST"> -->
       <!-- <form action="form-handler.php" method="post"> -->
-        <form action="mailto:info@adpedia.net" method="post" >
-      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
-      <p>
-        <button class="w3-button w3-black" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
+        <form action="mailto:info@adpedia.net" method="post">
+  <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name" value="John Doe"></p>
+  <p><input class="w3-input w3-border" type="email" placeholder="Email" required name="Email" value="johndoe@example.com"></p>
+  <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject" value="Regarding the Project"></p>
+  <p><textarea class="w3-input w3-border" placeholder="Message" required name="Message">Hello, I would like to discuss the project details with you.</textarea></p>
+  <p>
+    <button class="w3-button w3-black" type="submit">
+      <i class="fa fa-paper-plane"></i> SEND MESSAGE
+    </button>
+  </p>
+</form>
           <!-- <div class="w3-large w3-section">
     <a href="mailto:name@abc.com?subject=The%20subject%20of%20the%20mail">
 Send mail with subject</a>
