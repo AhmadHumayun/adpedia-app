@@ -337,7 +337,8 @@ body, html {
     <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: info@adpedia.net</p>
     <br>
     <!-- <form action="https://formspree.io/f/mnqkajlw" method="POST"> -->
-      <form action="form-handler.php" method="post">
+      <!-- <form action="form-handler.php" method="post"> -->
+        <form action="mailto:info@adpedia.net" method="post">
       <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
       <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
       <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
@@ -346,6 +347,10 @@ body, html {
         <button class="w3-button w3-black" type="submit">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
+          <!-- <div class="w3-large w3-section">
+    <a href="mailto:name@abc.com?subject=The%20subject%20of%20the%20mail">
+Send mail with subject</a>
+  </div> -->
       </p>
     </form>
     <!-- Image of location/map -->
@@ -363,10 +368,6 @@ body, html {
     <i class="fa fa-pinterest-p w3-hover-opacity"></i>
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
-  <div class="w3-large w3-section">
-    <a href="mailto:name@abc.com?subject=The%20subject%20of%20the%20mail">
-Send mail with subject</a>
   </div>
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
