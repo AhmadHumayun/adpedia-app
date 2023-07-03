@@ -338,17 +338,17 @@ body, html {
     <br>
     <!-- <form action="https://formspree.io/f/mnqkajlw" method="POST"> -->
       <!-- <form action="form-handler.php" method="post"> -->
-        <form action="mailto:info@adpedia.net" method="post">
-  <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name" value="John Doe"></p>
-  <p><input class="w3-input w3-border" type="email" placeholder="Email" required name="Email" value="johndoe@example.com"></p>
-  <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject" value="Regarding the Project"></p>
-  <p><textarea class="w3-input w3-border" placeholder="Message" required name="Message">Hello, I would like to discuss the project details with you.</textarea></p>
-  <p>
-    <button class="w3-button w3-black" type="submit">
-      <i class="fa fa-paper-plane"></i> SEND MESSAGE
-    </button>
-  </p>
-</form>
+    <form action="mailto:info@adpedia.net" method="post">
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name" id="name"></p>
+      <p><input class="w3-input w3-border" type="email" placeholder="Email" required name="Email" id="email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject" id="subject"></p>
+      <p><textarea class="w3-input w3-border" placeholder="Message" required name="Message" id="message"></textarea></p>
+      <p>
+        <button class="w3-button w3-black" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
           <!-- <div class="w3-large w3-section">
     <a href="mailto:name@abc.com?subject=The%20subject%20of%20the%20mail">
 Send mail with subject</a>
@@ -375,30 +375,30 @@ Send mail with subject</a>
 </footer>
  
 <script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
-
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
+  // Modal Image Gallery
+  function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
   }
-}
 
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
+
+  // Toggle between showing and hiding the sidebar when clicking the menu icon
+  var mySidebar = document.getElementById("mySidebar");
+
+  function w3_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+    } else {
+      mySidebar.style.display = 'block';
+    }
+  }
+
+  // Close the sidebar with the close button
+  function w3_close() {
+      mySidebar.style.display = "none";
+  }
 
   // Get all the elements with the w3-card class
   var cards = document.getElementsByClassName('w3-card w3-white w3-center');
@@ -420,10 +420,24 @@ function w3_close() {
   }
 
   window.onbeforeunload = () => {
-  for(const form of document.getElementsByTagName('form')) {
-    form.reset();
+    for(const form of document.getElementsByTagName('form')) {
+      form.reset();
+    }  
   }
-}
+  // Function to decode URL-encoded values
+  function decodeURL(url) {
+    return decodeURIComponent(url.replace(/\+/g, ' '));
+  }
+
+  // Get the URL parameter values
+  const urlParams = new URLSearchParams(window.location.search);
+
+  // Populate the form fields with the decoded values
+  document.getElementById('name').value = decodeURL(urlParams.get('Name'));
+  document.getElementById('email').value = decodeURL(urlParams.get('Email'));
+  document.getElementById('subject').value = decodeURL(urlParams.get('Subject'));
+  document.getElementById('message').value = decodeURL(urlParams.get('Message'));
+
 </script>
 
 </body>
