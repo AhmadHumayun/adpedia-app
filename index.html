@@ -437,7 +437,8 @@ Send mail with subject</a>
     const subject = encodeURIComponent(document.querySelector('input[name="Subject"]').value);
     const message = encodeURIComponent(document.querySelector('textarea[name="Message"]').value);
 
-    const mailtoLink = `mailto:info@adpedia.net?subject=${subject}&body=Name=${name}%0AEmail=${email}%0ASubject=${subject}%0AMessage=${message}`;
+    // const mailtoLink = `mailto:info@adpedia.net?subject=${subject}&body=Name=${name}%0AEmail=${email}%0ASubject=${subject}%0AMessage=${message}`;
+    const mailtoLink = `mailto:info@adpedia.net?subject=${subject}&body=${name}%0A${email}%0A${subject}%0A${message}`;
 
     window.location.href = mailtoLink;
   }
