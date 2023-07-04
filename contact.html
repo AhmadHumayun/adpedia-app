@@ -145,14 +145,14 @@ body, html {
           const message = encodeURIComponent(document.querySelector('textarea[name="message"]').value);
           const email = encodeURIComponent(document.querySelector('input[name="email"]').value);
           const phone = encodeURIComponent(document.querySelector('input[name="phone"]').value);
-          const company = encodeURIComponent(document.querySelector('textarea[name="company"]').value);
-          const website = encodeURIComponent(document.querySelector('textarea[name="website"]').value);
-          const organization = encodeURIComponent(document.querySelector('textarea[name="org"]').value);
+          const company = encodeURIComponent(document.querySelector('input[name="company"]').value);
+          const website = encodeURIComponent(document.querySelector('input[name="website"]').value);
+          const organization = encodeURIComponent(document.querySelector('input[name="org"]').value);
           const Subject='SimpliZen'
 
           // const mailtoLink = `mailto:info@adpedia.net?subject=${subject}&body=Name=${name}%0AEmail=${email}%0ASubject=${subject}%0AMessage=${message}`;
           // const mailtoLink = `mailto:info@adpedia.net?subject=${Subject}&body=First Name: ${first_name}%0ALast Name: ${last_name}%0AMessage: ${message}%0AEmail: ${email}%0APhone: ${phone}%0ACompany: ${company}%0AWensite: ${website}%0AOrganization Non Profit: ${organization}`;
-          const mailtoLink = `mailto:info@adpedia.net?subject=${Subject}&body=First Name: ${first_name}%0ALast Name: ${last_name}%0AMessage: ${message}`;
+          const mailtoLink = `mailto:info@adpedia.net?subject=${Subject}&body=First%20Name: ${first_name}%0ALast%20Name: ${last_name}%0AMessage: ${message}`;
 
           window.location.href = mailtoLink;
         }
