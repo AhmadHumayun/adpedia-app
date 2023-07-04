@@ -164,7 +164,7 @@ body, html {
               const website = encodeURIComponent(document.querySelector('input[name="website"]').value);
               const isNonProfit = document.querySelector('input[name="org"]').checked ? "Yes" : "No";
 
-              const mailtoLink = `mailto:info@adpedia.net?subject=Inquiry&body=First Name: ${firstName}%0ALast Name: ${lastName}%0AMessage: ${message}%0AEmail: ${email}%0APhone: ${phone}%0ACompany: ${company}%0AWebsite: ${website}%0ANon-Profit Organization: ${isNonProfit}`;
+              const mailtoLink = `mailto:info@adpedia.net?subject=Inquiry&body=FirstName: ${firstName}%0ALastName: ${lastName}%0AMessage: ${message}%0AEmail: ${email}%0APhone: ${phone}%0ACompany: ${company}%0AWebsite: ${website}%0ANonProfitOrganization: ${isNonProfit}`;
 
               window.location.href = mailtoLink;
         }
