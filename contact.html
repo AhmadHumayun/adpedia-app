@@ -50,6 +50,7 @@ body, html {
         </button>
       </p>
     </form>
+    </div>
   <!-- <div class="w3-row-padding"  style="margin:5px;">
       <div class="w3-half">
           <p><input class="w3-input w3-border"  name = "first_name" type="text" placeholder="First Name">
@@ -95,7 +96,7 @@ body, html {
           <!-- <button class="w3-btn w3-teal w3-text-white" style="margin-top: 20px; width:100%; margin-bottom: 20px;" onclick="sendEmail()" type="submit"> Contact Us</button> -->
       <!-- </div> -->
       <!-- </div> -->
-    </div>
+    
     <!-- </form> -->
   <div class="w-container w3-light-grey">
     <div class="w3-row-padding" style="margin-top: 60px;">
@@ -173,7 +174,15 @@ body, html {
           // const mailtoLink = `mailto:info@adpedia.net?subject=${subject}&body=Name=${name}%0AEmail=${email}%0ASubject=${subject}%0AMessage=${message}`;
           const mailtoLink = `mailto:info@adpedia.net?subject=${subject}&body=Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
           console.log('mail: ',mailtoLink)
-          window.location.href = mailtoLink;
+          // window.location.href = mailtoLink;
+          const link = document.createElement('a');
+          link.href = mailtoLink;
+
+          // Open mailto link in a new tab/window
+          link.target = '_blank';
+
+          // Prompt the user to click the link
+          link.click();
         }
     </script>
 </body>
