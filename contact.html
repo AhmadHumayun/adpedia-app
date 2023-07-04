@@ -129,26 +129,25 @@ body, html {
         </div>
         <div class="w3-container w3-text-white w3-margin">
             &copy; SimpliZen 
-        </div>
-        <script>
-          function sendEmail() {
-              const first_name = encodeURIComponent(document.querySelector('input[name="first_name"]').value);
-              const last_name = encodeURIComponent(document.querySelector('input[name="last_name"]').value);
-              const message = encodeURIComponent(document.querySelector('textarea[name="message"]').value);
-              const email = encodeURIComponent(document.querySelector('input[name="email"]').value);
-              const phone = encodeURIComponent(document.querySelector('input[name="phone"]').value);
-              const company = encodeURIComponent(document.querySelector('textarea[name="company"]').value);
-              const website = encodeURIComponent(document.querySelector('textarea[name="website"]').value);
-              const organization = encodeURIComponent(document.querySelector('textarea[name="org"]').value);
-
-              // const mailtoLink = `mailto:info@adpedia.net?subject=${subject}&body=Name=${name}%0AEmail=${email}%0ASubject=${subject}%0AMessage=${message}`;
-              const mailtoLink = `mailto:info@adpedia.net?subject=SimpliZen&body=First Name: ${first_name}%0ALast Name: ${last_name}%0AMessage: ${message}%0AEmail: ${email}%0APhone: ${phone}%0ACompany: ${company}%0AWensite: ${website}%0AOrganization Non Profit: ${organization}`;
-
-              window.location.href = mailtoLink;
-            }
-        </script>
-             
+        </div>     
     </footer>
+    <script>
+      function sendEmail() {
+          const first_name = encodeURIComponent(document.querySelector('input[name="first_name"]').value);
+          const last_name = encodeURIComponent(document.querySelector('input[name="last_name"]').value);
+          const message = encodeURIComponent(document.querySelector('textarea[name="message"]').value);
+          const email = encodeURIComponent(document.querySelector('input[name="email"]').value);
+          const phone = encodeURIComponent(document.querySelector('input[name="phone"]').value);
+          const company = encodeURIComponent(document.querySelector('textarea[name="company"]').value);
+          const website = encodeURIComponent(document.querySelector('textarea[name="website"]').value);
+          const organization = encodeURIComponent(document.querySelector('textarea[name="org"]').value);
+
+          // const mailtoLink = `mailto:info@adpedia.net?subject=${subject}&body=Name=${name}%0AEmail=${email}%0ASubject=${subject}%0AMessage=${message}`;
+          const mailtoLink = `mailto:info@adpedia.net?subject=SimpliZen&body=First Name: ${first_name}%0ALast Name: ${last_name}%0AMessage: ${message}%0AEmail: ${email}%0APhone: ${phone}%0ACompany: ${company}%0AWensite: ${website}%0AOrganization Non Profit: ${organization}`;
+
+          window.location.href = mailtoLink;
+        }
+    </script>
 </body>
 </html>
 
