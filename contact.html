@@ -39,19 +39,8 @@ body, html {
         <p>Drop us a line below to connect with SimpliZen team member.</p>
  
 <!-- Contact Us Widget -->
-    <form action="mailto:info@adpedia.net" method="post">
-      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name" id="name"></p>
-      <p><input class="w3-input w3-border" type="email" placeholder="Email" required name="Email" id="email"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject" id="subject"></p>
-      <p><textarea class="w3-input w3-border" placeholder="Message" required name="Message" id="message"></textarea></p>
-      <p>
-        <button class="w3-button w3-black" type="button" onclick="openMailTo()">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </p>
-    </form>
-    </div>
-  <!-- <div class="w3-row-padding"  style="margin:5px;">
+<form action="mailto:info@adpedia.net" method="post">
+  <div class="w3-row-padding"  style="margin:5px;">
       <div class="w3-half">
           <p><input class="w3-input w3-border"  name = "first_name" type="text" placeholder="First Name">
           </p>
@@ -86,18 +75,18 @@ body, html {
         <input class="w3-check" name="org" type="checkbox">
         <label>Non Profit Organization</label>
        </p>
-        </div> -->
-      <!-- <div class="w3-container"> -->
+        </div>
+      <div class="w3-container">
               <!-- <p>
         <button class="w3-button w3-black" type="submit">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
       </p> -->
-          <!-- <button class="w3-btn w3-teal w3-text-white" style="margin-top: 20px; width:100%; margin-bottom: 20px;" onclick="sendEmail()" type="submit"> Contact Us</button> -->
-      <!-- </div> -->
-      <!-- </div> -->
-    
-    <!-- </form> -->
+          <button class="w3-btn w3-teal w3-text-white" style="margin-top: 20px; width:100%; margin-bottom: 20px;" onclick="sendEmail()" type="button"> Contact Us</button>
+      </div>
+      </div>
+    </div>
+    </form>
   <div class="w-container w3-light-grey">
     <div class="w3-row-padding" style="margin-top: 60px;">
         <div class="w3-third">
@@ -150,7 +139,7 @@ body, html {
         </div>     
     </footer>
     <script>
-      function openMailTo() {
+      function sendEmail() {
           // const first_name = encodeURIComponent(document.querySelector('input[name="first_name"]').value);
           // const last_name = encodeURIComponent(document.querySelector('input[name="last_name"]').value);
           // const message = encodeURIComponent(document.querySelector('textarea[name="message"]').value);
@@ -166,27 +155,27 @@ body, html {
           // const mailtoLink = `mailto:info@adpedia.net?subject=${Subject}&body=First%20Name: ${first_name}%0ALast%20Name: ${last_name}%0AMessage: ${message}`;
 
           // window.location.href = mailtoLink;
-          // function openMailTo() {
-    const firstName = encodeURIComponent(document.querySelector('input[name="Name"]').value);
-    const lastName = encodeURIComponent(document.querySelector('input[name="Subject"]').value);
-    const message = encodeURIComponent(document.querySelector('textarea[name="Message"]').value);
-    const email = encodeURIComponent(document.querySelector('input[name="Email"]').value);
-    // const phone = encodeURIComponent(document.querySelector('input[name="phone"]').value);
-    // const company = encodeURIComponent(document.querySelector('input[name="company"]').value);
-    // const website = encodeURIComponent(document.querySelector('input[name="website"]').value);
-    // const isNonProfit = document.querySelector('input[name="org"]').checked ? "Yes" : "No";
+              const firstName = encodeURIComponent(document.querySelector('input[name="first_name"]').value);
+              const lastName = encodeURIComponent(document.querySelector('input[name="last_name"]').value);
+              const message = encodeURIComponent(document.querySelector('textarea[name="message"]').value);
+              const email = encodeURIComponent(document.querySelector('input[name="email"]').value);
+              const phone = encodeURIComponent(document.querySelector('input[name="phone"]').value);
+              const company = encodeURIComponent(document.querySelector('input[name="company"]').value);
+              const website = encodeURIComponent(document.querySelector('input[name="website"]').value);
+              const isNonProfit = document.querySelector('input[name="org"]').checked ? "Yes" : "No";
 
-    const mailtoLink = `mailto:info@adpedia.net?subject=Inquiry&body=First Name: ${firstName}%0ALast Name: ${lastName}%0AMessage: ${message}%0AEmail: ${email}`;
+              const mailtoLink = `mailto:info@adpedia.net?subject=Inquiry&body=FirstName: ${firstName}%0ALastName: ${lastName}%0AMessage: ${message}%0AEmail: ${email}%0APhone: ${phone}%0ACompany: ${company}%0AWebsite: ${website}%0ANonProfitOrganization: ${isNonProfit}`;
+              console.log('mail: ',mailtoLink)
+              // window.location.href = mailtoLink;
+              const link = document.createElement('a');
+              link.href = mailtoLink;
 
-    const link = document.createElement('a');
-    link.href = mailtoLink;
+              // Open mailto link in a new tab/window
+              link.target = '_blank';
 
-    // Open mailto link in a new tab/window
-    link.target = '_blank';
-
-    // Prompt the user to click the link
-    link.click();
-  }
+              // Prompt the user to click the link
+              link.click();
+        }
         
     </script>
 </body>
