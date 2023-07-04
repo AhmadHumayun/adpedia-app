@@ -139,6 +139,11 @@ body, html {
         </div>     
     </footer>
     <script>
+        window.onbeforeunload = () => {
+          for(const form of document.getElementsByTagName('form')) {
+            form.reset();
+          }  
+        }
       function sendEmail() {
           // const first_name = encodeURIComponent(document.querySelector('input[name="first_name"]').value);
           // const last_name = encodeURIComponent(document.querySelector('input[name="last_name"]').value);
