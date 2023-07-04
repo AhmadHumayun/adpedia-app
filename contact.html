@@ -40,11 +40,11 @@ body, html {
  
 <!-- Contact Us Widget -->
 <form action="mailto:info@adpedia.net" method="post">
-      <p><input class="w3-input w3-border" type="text" placeholder="First Name" required name="first_name" id="name"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Last Name" required name="last_name" id="name"></p>
-      <p><textarea class="w3-input w3-border" placeholder="Message" required name="message" id="message"></textarea></p>
-      <p><input class="w3-input w3-border" type="email" placeholder="Email" required name="email" id="email"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Phone" required name="phone" id="subject"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="First Name" required name="First_Name" id="name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Last Name" required name="Last_Name" id="name"></p>
+      <p><textarea class="w3-input w3-border" placeholder="Message" required name="Message" id="message"></textarea></p>
+      <p><input class="w3-input w3-border" type="email" placeholder="Email" required name="Email" id="email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Phone" required name="Phone" id="phone"></p>
       <p>
         <button class="w3-button w3-black" onclick="sendEmail()" type="submit">
           <i class="fa fa-paper-plane"></i> CONTACT US
@@ -165,11 +165,11 @@ body, html {
           // const mailtoLink = `mailto:info@adpedia.net?subject=${Subject}&body=First%20Name: ${first_name}%0ALast%20Name: ${last_name}%0AMessage: ${message}`;
 
           // window.location.href = mailtoLink;
-              const firstName = encodeURIComponent(document.querySelector('input[name="first_name"]').value);
-              const lastName = encodeURIComponent(document.querySelector('input[name="last_name"]').value);
-              const message = encodeURIComponent(document.querySelector('textarea[name="message"]').value);
-              const email = encodeURIComponent(document.querySelector('input[name="email"]').value);
-              const phone = encodeURIComponent(document.querySelector('input[name="phone"]').value);
+              const firstName = encodeURIComponent(document.querySelector('input[name="First_Name"]').value);
+              const lastName = encodeURIComponent(document.querySelector('input[name="Last_Name"]').value);
+              const message = encodeURIComponent(document.querySelector('textarea[name="Message"]').value);
+              const email = encodeURIComponent(document.querySelector('input[name="Email"]').value);
+              const phone = encodeURIComponent(document.querySelector('input[name="Phone"]').value);
               // const company = encodeURIComponent(document.querySelector('input[name="company"]').value);
               // const website = encodeURIComponent(document.querySelector('input[name="website"]').value);
               // const isNonProfit = document.querySelector('input[name="org"]').checked ? "Yes" : "No";
