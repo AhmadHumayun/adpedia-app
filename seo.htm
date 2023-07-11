@@ -33,6 +33,14 @@ body, html {
   padding: 16px;
 }
 </style>
+<head>
+  <!-- Google tag (gtag.js) --> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XQXF62KTYZ">
+  </script> 
+  <script> window.dataLayer = window.dataLayer || []; 
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XQXF62KTYZ'); 
+  </script>
+</head>
 <body>
     <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -282,7 +290,7 @@ body, html {
               const company = encodeURIComponent(document.querySelector('input[name="company"]').value);
               const website = encodeURIComponent(document.querySelector('input[name="website"]').value);
 
-              const mailtoLink = `mailto:info@adpedia.net?subject=Inquiry&body=First Name: ${firstName}%0ALast Name: ${lastName}%0AMessage: ${message}%0A%0AEmail: ${email}%0APhone: ${phone}%0ACompany: ${company}%0AWebsite: ${website}`;
+              const mailtoLink = `mailto:sales@adpedia.net?subject=Inquiry&body=First Name: ${firstName}%0ALast Name: ${lastName}%0AMessage: ${message}%0A%0AEmail: ${email}%0APhone: ${phone}%0ACompany: ${company}%0AWebsite: ${website}`;
               console.log('mail: ',mailtoLink)
               // window.location.href = mailtoLink;
               const link = document.createElement('a');

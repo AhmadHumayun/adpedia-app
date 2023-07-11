@@ -118,7 +118,6 @@ body, html {
   document.addEventListener("DOMContentLoaded", function() {
     var navbarHeight = document.getElementById("myNavbar").offsetHeight;
     var navbarLinks = document.querySelectorAll("#myNavbar a,#mySidebar a,#home a");
-
     
     navbarLinks.forEach(function(link) {
       link.addEventListener("click", function(event) {
@@ -333,8 +332,8 @@ body, html {
   <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
   <div style="margin-top:48px">
     <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> California, US</p>
-    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: (925) 226-8756‬</p>
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: info@adpedia.net</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: (408) 658-9849‬</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: sales@adpedia.net</p>
     <br>
     <!-- <form action="https://formspree.io/f/mnqkajlw" method="POST"> -->
       <!-- <form action="form-handler.php" method="post"> -->
@@ -438,8 +437,8 @@ Send mail with subject</a>
     const message = encodeURIComponent(document.querySelector('textarea[name="Message"]').value);
 
     // const mailtoLink = `mailto:info@adpedia.net?subject=${subject}&body=Name=${name}%0AEmail=${email}%0ASubject=${subject}%0AMessage=${message}`;
-    const mailtoLink = `mailto:info@adpedia.net?subject=${subject}&body=Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
-
+    const mailtoLink = `mailto:sales@adpedia.net?subject=${subject}&body=Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+    console.log('mail: ',mailtoLink)
     window.location.href = mailtoLink;
   }
   

@@ -33,6 +33,14 @@ body, html {
   padding: 16px;
 }
 </style>
+<head>
+  <!-- Google tag (gtag.js) --> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XQXF62KTYZ">
+  </script> 
+  <script> window.dataLayer = window.dataLayer || []; 
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XQXF62KTYZ'); 
+  </script>
+</head>
 <body>
     <div class="w3-container w3-center w3-padding w3-light-grey" style="margin:auto; width:75%;">
         <h3 class="w3-text-teal">Ready To Start?</h3>
@@ -95,7 +103,7 @@ body, html {
               <img src="images/icons/icon-phone.jpg" style="width:60px; height: 50px;">    
               <h4 class="w3-text-teal"> Drop Us A Line‬</h4>
               <p>Call Us‬</p>
-              <p class="w3-text-red">(925) 226-8756‬</p>
+              <p class="w3-text-red">(408) 658-9849‬</p>
           </div>
         </div>  
          <div class="w3-third">
@@ -103,7 +111,7 @@ body, html {
               <img src="images/icons/icon-email.jpg" style="width:60px; height: 50px;"> 
               <h4 class="w3-text-teal"> Send Us An Email ‬</h4>
               <p>Get a quote or learn about services.‬</p>
-              <p class="w3-text-red">info@adpedia.net</p> 
+              <p class="w3-text-red">sales@adpedia.net</p> 
            </div>
         </div> 
             <div class="w3-third">
@@ -155,7 +163,7 @@ body, html {
               const website = encodeURIComponent(document.querySelector('input[name="website"]').value);
               const isNonProfit = document.querySelector('input[name="org"]').checked ? "Yes" : "No";
 
-              const mailtoLink = `mailto:info@adpedia.net?subject=Inquiry&body=First Name: ${firstName}%0ALast Name: ${lastName}%0A%0AMessage: ${message}%0A%0AEmail: ${email}%0APhone: ${phone}%0ACompany: ${company}%0AWebsite: ${website}%0ANon-Profit Organization: ${isNonProfit}`;
+              const mailtoLink = `mailto:sales@adpedia.net?subject=Inquiry&body=First Name: ${firstName}%0ALast Name: ${lastName}%0A%0AMessage: ${message}%0A%0AEmail: ${email}%0APhone: ${phone}%0ACompany: ${company}%0AWebsite: ${website}%0ANon-Profit Organization: ${isNonProfit}`;
               console.log('mail: ',mailtoLink)
               // window.location.href = mailtoLink;
               const link = document.createElement('a');
